@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 import { DefaultSeo } from 'next-seo';
-import '../styles.css';
+import '../styles/index.css';
 
 function App({ Component, pageProps }: AppProps) {
 
