@@ -17,7 +17,9 @@
     "@mdx-js/react": "^1.6.22",
     "@next/bundle-analyzer": "^11.0.1",
     "@next/mdx": "^10.0.7",
+    "@types/prettier": "^2.3.2",
     "classnames": "2.2.6",
+    "clsx": "^1.1.1",
     "date-fns": "2.10.0",
     "gray-matter": "^4.0.2",
     "markdown-toc": "^1.2.0",
@@ -29,6 +31,7 @@
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "17.0.2",
     "react-ga": "^3.3.0",
+    "react-icons": "^4.2.0",
     "react-markdown": "^5.0.3",
     "react-syntax-highlighter": "^15.3.1",
     "react-tooltip": "^4.2.17",
@@ -56,7 +59,7 @@
     "file-loader": "^6.2.0",
     "postcss": "8",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.2",
     "tailwindcss": "2.1.2"
   }
 }
