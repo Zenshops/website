@@ -36,7 +36,7 @@ const Header = (props: any) => {
     const CallOutSection = () => {
         return (
             <div className="flex justify-center items-center">
-                <Button type="secondary" text="Star us on GitHub" buttonIcon={githubIcon} textSize="xs" leadingSize="4" url="https://github.com/"></Button>
+                <Button type="secondary" text="Star us on GitHub" buttonIcon={githubIcon} textSize="xs" leadingSize="4" url="https://github.com/Zenshops/website"></Button>
             </div>
         )
     }
