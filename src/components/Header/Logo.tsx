@@ -1,6 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link';
 
 interface LogoProps {
     height: string
@@ -10,7 +8,7 @@ interface LogoProps {
 
 function Logo({ height, width, className }: LogoProps) {
     return (
-        <Image src="/images/Logo/LogoMixHorizontal.png" alt="Zenshops Logo" height={height} width={width} />
+        <img src="/images/Logo/LogoMixHorizontal.png" alt="Zenshops Logo" height={height} width={width} />
     )
 }
 
