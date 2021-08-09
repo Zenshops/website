@@ -4,11 +4,12 @@ interface LogoProps {
     height: string
     width: string
     className?: string | "";
+    logoPath: string
 }
 
-function Logo({ height, width, className }: LogoProps) {
+function Logo({ height, width, className, logoPath }: LogoProps) {
     return (
-        <img src="/images/Logo/LogoMixHorizontal.png" alt="Zenshops Logo" height={height} width={width} />
+        <img src={logoPath} alt="Zenshops Logo" height={height} width={width} />
     )
 }
 

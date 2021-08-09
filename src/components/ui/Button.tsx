@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Icon from "react-icons/all"
 
 type ButtonProps = {
     type?: "primary" | "secondary";
@@ -18,7 +17,7 @@ const Button = (props: ButtonProps) => {
     const colorClass =
         type === "primary"
             ? `px-2 py-1.5 shadow-sm border border-transparent text-white bg-brand-800 hover:bg-brand-900 focus:ring-1 focus:ring-offset-1 focus:ring-brand-500`
-            : "px-2 py-1.5 shadow-sm border border-gray-600 text-gray-300 bg-gray-600 hover:bg-gray-700 focus:ring-1 focus:ring-offset-1 focus:ring-gray-500";
+            : "px-2 py-1.5 shadow-sm border dark:border-gray-600 dark:text-gray-300 bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 focus:ring-1 focus:ring-offset-1 focus:ring-gray-500";
 
     const textClass =
         type === "primary"
@@ -26,7 +25,7 @@ const Button = (props: ButtonProps) => {
             : "font-medium left-2 group-hover:left-0";
 
     const arrowClass =
-        type === "primary" ? "" : "relative -left-0 group-hover:left-0";
+        type === "primary" ? "" : "relative -left-0 group-hover:left-0 text-gray-300 dark:text-gray-400";
 
     let buttonStyles = {
         textShadow: "none",
@@ -37,8 +36,8 @@ const Button = (props: ButtonProps) => {
 
     let iconClass =
         type === "primary"
-            ? "mr-2 shadow-sm border border-transparent text-brand-100 text-white font-bold focus:ring-1 focus:ring-offset-1 focus:ring-brand-500 font-medium left-2 group-hover:left-0"
-            : "mr-2 shadow-sm border border-transparent text-gray-300 font-bold focus:ring-1 focus:ring-offset-0 focus:ring-gray-500 left-2 group-hover:left-0";
+            ? "mr-2 shadow-sm border border-transparent text-brand-100 font-bold focus:ring-1 focus:ring-offset-1 focus:ring-brand-500 font-medium left-2 group-hover:left-0"
+            : "mr-2 shadow-sm border border-transparent text-gray-400 dark:text-gray-300 font-bold focus:ring-1 focus:ring-offset-0 focus:ring-gray-500 left-2 group-hover:left-0";
 
     const renderButton = () => (
         <button

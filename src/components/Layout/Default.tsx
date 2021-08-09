@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 import Header from '../Header/Header';
 
 interface DefaultLayoutProps {
@@ -9,20 +9,29 @@ interface DefaultLayoutProps {
 
 const DefaultLayout = (props: DefaultLayoutProps) => {
     const { children } = props
-    // const [darkMode, setDarkMode] = useState<boolean>(true)
+    const [darkMode, setDarkMode] = useState<boolean>(true)
 
-    // useEffect(() => {
-    //     const isDarkMode = localStorage.getItem('zenshopsDarkMode')
+    useEffect(() => {
+        const isDarkMode = localStorage.getItem('zenshopsDarkMode')
 
-    //     if (isDarkMode) {
-    //         setDarkMode(isDarkMode === 'true')
-    //         document.documentElement.className = isDarkMode === 'true' ? 'dark' : ''
-    //     }
-    // })
+        console.log(isDarkMode)
+
+        if (!isDarkMode) {
+            localStorage.setItem('zenshopsDarkMode', (!darkMode).toString())
+        } else {
+            setDarkMode(isDarkMode === 'true')
+            document.documentElement.className = isDarkMode === 'true' ? 'dark' : ''
+        }
+    })
+
+    const updateTheme = (isDarkMode: boolean) => {
+        document.documentElement.className = isDarkMode ? 'dark' : ''
+        setDarkMode(isDarkMode)
+    }
 
     return (
         <>
-            <Header />
+            <Header darkMode={darkMode} updateTheme={updateTheme} />
             <div className="min-h-full bg-white dark:bg-gray-900">
                 <main>{children}</main>
             </div>

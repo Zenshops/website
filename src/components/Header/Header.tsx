@@ -1,23 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from 'next/link';
 import { useRouter } from "next/router";
 import Logo from "./Logo";
 import Button from "../ui/Button";
 import { FiStar } from 'react-icons/fi'
 import SectionContainer from "../Layout/SectionContainer";
+import DarkModeToggle from "../DarkModeToggle";
 
-// interface HeaderProps {
-//     darkMode: Boolean
-// }
+interface HeaderProps {
+    darkMode: boolean
+    updateTheme: Function
+}
 
-const Header = (props: any) => {
+const Header = (props: HeaderProps) => {
     const { basePath } = useRouter()
     const githubIcon = (<FiStar size={15} />)
+    const { darkMode, updateTheme } = props
 
     // Left section
     const LogoSection = () => {
         return <Link href={'/'}>
-            <a className="flex justify-center items-center"><Logo height="30px" width="140px" className="hover:cursor-pointer" /></a>
+            <a className="flex justify-center items-center"><Logo logoPath={darkMode ? '/images/Logo/LogoMixHorizontal.png' : '/images/Logo/LogoMixHorizontalBlack.png'} height="30px" width="140px" className="hover:cursor-pointer" /></a>
         </Link>
     }
 
@@ -36,10 +39,11 @@ const Header = (props: any) => {
     const CallOutSection = () => {
         return (
             <div className="flex justify-center items-center">
-                <Button type="secondary" text="Star us on GitHub" buttonIcon={githubIcon} textSize="xs" leadingSize="4" url="https://github.com/Zenshops/website"></Button>
+                <Button type="secondary" text="Get Started" buttonIcon={githubIcon} textSize="xs" leadingSize="4" url="https://github.com/Zenshops/website"></Button>
             </div>
         )
     }
+
 
     return (
         <div className="sticky top-0 z-50">
@@ -49,8 +53,9 @@ const Header = (props: any) => {
                         {LogoSection()}
                         {MenuSection()}
                     </div>
-                    <div className="flex justify-end">
+                    <div className="flex justify-between">
                         {CallOutSection()}
+                        <DarkModeToggle darkMode={darkMode} updateTheme={updateTheme} />
                     </div>
                 </SectionContainer>
             </nav>
