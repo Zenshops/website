@@ -32,7 +32,7 @@ const DefaultLayout = (props: DefaultLayoutProps) => {
     return (
         <>
             <Header darkMode={darkMode} updateTheme={updateTheme} />
-            <div className="min-h-full bg-white dark:bg-gray-900">
+            <div className="min-h-full max-w-full flex justify-center items-center bg-white dark:bg-gray-900">
                 <main>{children}</main>
             </div>
         </>

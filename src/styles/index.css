@@ -10,13 +10,13 @@
 	font-style: normal;
 }
 
-@font-face {
+/* @font-face {
 	font-family: "custom-font";
 	src: url(/fonts/custom/DMSans-Medium.woff2) format("woff2"),
 		url(/fonts/custom/DMSans-Medium.woff) format("woff");
-	font-weight: 700;
+	font-weight: 800;
 	font-style: normal;
-}
+} */
 
 @font-face {
 	font-family: "custom-font";
@@ -25,6 +25,29 @@
 	font-weight: 900;
 	font-style: normal;
 }
+/* @font-face {
+	font-family: "roobert-font";
+	src:  url(/fonts/roobert/Roobert-Regular.woff2) format("woff2"),
+		 url(/fonts/roobert/Roobert-Regular.woff) format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "roobert-font";
+	src:  url(/fonts/roobert/Roobert-Medium.woff2) format("woff2"),
+		 url(/fonts/roobert/Roobert-Medium.woff) format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "roobert-font";
+	src:  url(/fonts/roobert/Roobert-Bold.woff2) format("woff2"),
+		 url(/fonts/roobert/Roobert-Bold.woff) format("woff");
+	font-weight: 900;
+	font-style: normal;
+} */
 
 h1,
 h2,

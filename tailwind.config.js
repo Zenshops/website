@@ -92,6 +92,7 @@ module.exports = {
             },
             fontFamily: {
                 sans: [
+                    "roobert-font",
                     "custom-font",
                     "BlinkMacSystemFont",
                     "-apple-system",
