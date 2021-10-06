@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import DefaultLayout from '~/components/Layout/Default';
 
-export const Product = () => {
+const Product: React.FC = () => {
 	return (
 		<>
 			<Head>
@@ -16,3 +16,5 @@ export const Product = () => {
 		</>
 	)
 };
+
+export default Product;

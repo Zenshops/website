@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import DefaultLayout from '~/components/Layout/Default';
 
-export const Pricing = () => {
+const Pricing: React.FC = () => {
 	return (
 		<>
 			<Head>
@@ -15,3 +15,4 @@ export const Pricing = () => {
 	)
 };
 
+export default Pricing;

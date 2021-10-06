@@ -1,3 +1,3 @@
-import { Pricing } from "./pricing";
+import Pricing from "./pricing";
 
 export default Pricing;
