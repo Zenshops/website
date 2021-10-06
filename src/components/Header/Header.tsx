@@ -35,7 +35,7 @@ const Header = (props: HeaderProps) => {
     const LogoSection = () => {
         return (
             <Link href={'/'}>
-                <a className="lg:flex justify-center items-center"><Logo logoPath={darkMode ? '/images/Logo/LogoWhiteHorizontal.png' : '/images/Logo/LogoMixHorizontalBlack.png'} height="30px" width="140px" className="hover:cursor-pointer" /></a>
+                <a className="lg:flex justify-center items-center"><Logo logoPath={'/images/Logo/LogoWhiteHorizontal.png'} height="30px" width="140px" className="hover:cursor-pointer" /></a>
             </Link>
         )
     }
