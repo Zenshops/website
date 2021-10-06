@@ -30,7 +30,7 @@ const DefaultLayout = (props: DefaultLayoutProps) => {
     }
 
     return (
-        <div className="w-screen">
+        <div className="w-screen select-none">
             <Header darkMode={darkMode} updateTheme={updateTheme} />
             <div className="min-h-full max-w-full flex justify-center items-center bg-gray-900 dark:bg-gray-900 m-auto sm:mx-10">
                 <main>{children}</main>

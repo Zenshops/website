@@ -66,7 +66,7 @@ const Header = (props: HeaderProps) => {
             onClick={() => props.toggleFlyOut()}
         >
             <button
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-gray-100 hover:bg-brand-900 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-brand-700"
+                className="bg-dark-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-brand-700 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-brand-500 dark:text-gray-100 dark:bg-dark-800"
                 aria-expanded="false"
             >
                 <span className="sr-only">Open main menu</span>
@@ -122,15 +122,16 @@ const Header = (props: HeaderProps) => {
                                     {LogoSection()}
                                 </div>
                                 <div className="pt-2 pb-4 space-y-1">
-                                    <div className="block pl-3 pr-4 py-2 text-base font-medium text-gray-100 hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
-                                        <Link href="/product">Product</Link>
+                                    <Link href="/product"><div className="cursor-pointer block pl-3 pr-4 py-2 text-base font-medium text-gray-100 hover:rounded hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
+                                        Product
+                                    </div></Link>
+                                    <Link href="/about"><div className="cursor-pointer block pl-3 pr-4 py-2 text-base font-medium text-gray-100 hover:rounded hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
+                                        About
+                                    </div></Link>
+                                    <Link href="/pricing"><div className="cursor-pointer block pl-3 pr-4 py-2 text-base font-medium text-gray-100 hover:rounded hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
+                                        Pricing
                                     </div>
-                                    <div className="block pl-3 pr-4 py-2 text-base font-medium text-gray-100 hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
-                                        <Link href="/about">About</Link>
-                                    </div>
-                                    <div className="block pl-3 pr-4 py-2 text-base font-medium text-gray-100 hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
-                                        <Link href="/pricing">Pricing</Link>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
