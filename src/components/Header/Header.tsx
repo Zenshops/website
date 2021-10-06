@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import Link from 'next/link';
 import { useRouter } from "next/router";
 import Logo from "./Logo";
-import Button from "../ui/Button";
+import Button from "../ui/RegularButton";
 import { FiStar, FiMenu, FiX } from 'react-icons/fi'
 import SectionContainer from "../Layout/SectionContainer";
-import DarkModeToggle from "../DarkModeToggle";
+import { Transition } from '@headlessui/react'
 
 interface HeaderProps {
     darkMode: boolean
@@ -17,8 +17,7 @@ interface HamburgerMenuProps {
 }
 
 const Header = (props: HeaderProps) => {
-    const { basePath } = useRouter()
-    const githubIcon = (<FiStar size={15} />)
+    const router = useRouter()
     const { darkMode, updateTheme } = props
     const [open, setOpen] = useState(false)
     const [showHamburger, setShowHamburger] = useState(false)
@@ -34,18 +33,20 @@ const Header = (props: HeaderProps) => {
 
     // Left section
     const LogoSection = () => {
-        return <Link href={'/'}>
-            <a className="flex justify-center items-center"><Logo logoPath={darkMode ? '/images/Logo/LogoWhiteHorizontal.png' : '/images/Logo/LogoMixHorizontalBlack.png'} height="30px" width="140px" className="hover:cursor-pointer" /></a>
-        </Link>
+        return (
+            <Link href={'/'}>
+                <a className="lg:flex justify-center items-center"><Logo logoPath={darkMode ? '/images/Logo/LogoWhiteHorizontal.png' : '/images/Logo/LogoMixHorizontalBlack.png'} height="30px" width="140px" className="hover:cursor-pointer" /></a>
+            </Link>
+        )
     }
 
     // Middle section
     const MenuSection = () => {
         return <>
-            <div className="flex justify-start items-center text-sm font-extrabold">
-                <div className="mx-8 hover:cursor-pointer"><Link href="/product/product">Product</Link></div>
-                <div className="">Docs</div>
-                <div className="mx-8">Pricing</div>
+            <div className="lg:flex lg:justify-start lg:items-start text-sm font-extrabold sm:hidden">
+                <div className="ml-6 mr-2 p-2 hover:cursor-pointer"><Link href="/product">Product</Link></div>
+                <div className="mx-2 p-2 hover:cursor-pointer"><Link href="/about">Docs</Link></div>
+                <div className="mx-2 p-2 hover:cursor-pointer"><Link href="/pricing">Pricing</Link></div>
             </div>
         </>
     }
@@ -53,23 +54,23 @@ const Header = (props: HeaderProps) => {
     // Right section
     const CallOutSection = () => {
         return (
-            <div className="flex justify-center items-center">
-                <Button type="primary" text="Get Started" textSize="xs" leadingSize="4" url="/product/product"></Button>
+            <div className="lg:flex justify-center items-center sm:hidden">
+                <Button type="primary" text="Get Started" textSize="xs" leadingSize="4" url="/product"></Button>
             </div>
         )
     }
 
     const HamburgerMenuButton = (props: HamburgerMenuProps) => {
         return (<div
-            className="absolute inset-y-0 left-0 px-2 flex items-center lg:hidden"
+            className="absolute z-50 inset-y-0 left-0 px-2 flex items-center lg:hidden"
             onClick={() => props.toggleFlyOut()}
         >
             <button
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-700"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-gray-100 hover:bg-brand-900 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-brand-700"
                 aria-expanded="false"
             >
                 <span className="sr-only">Open main menu</span>
-                {open ? <FiMenu size={20} /> : 
+                {!open ? <FiMenu size={20} /> :
                     <FiX size={20} />}
             </button>
         </div>)
@@ -79,22 +80,64 @@ const Header = (props: HeaderProps) => {
         <div className="sticky top-0 z-50">
             <nav className="bg-white dark:bg-gray-900 border-b dark:border-gray-700">
                 <div>
-                    {showHamburger ?
-                        <HamburgerMenuButton toggleFlyOut={() => setOpen(true)} /> :
-                        <SectionContainer>
-                            <div className="flex justify-start">
-                                {LogoSection()}
-                                {MenuSection()}
+                    <HamburgerMenuButton toggleFlyOut={() => { setOpen(true) }} />
+                    <SectionContainer>
+                        <div className="lg:flex lg:justify-start lg:mx-0 sm:mx-auto items-center">
+                            {LogoSection()}
+                            {MenuSection()}
+                        </div>
+                        <div className="flex justify-between">
+                            {CallOutSection()}
+                            {/* <DarkModeToggle darkMode={darkMode} updateTheme={updateTheme} /> */}
+                        </div>
+                    </SectionContainer>
+
+                    <Transition
+                        as={Fragment}
+                        appear={true}
+                        show={open}
+                        enter="transition ease-out duration-100"
+                        enterFrom="transform opacity-0 scale-95"
+                        enterTo="transform opacity-100 scale-100"
+                        leave="transition ease-in duration-75"
+                        leaveFrom="transform opacity-100 scale-100"
+                        leaveTo="transform opacity-0 scale-95"
+                    >
+                        <div className="p-4 md:p-8 h-screen w-screen fixed bg-white transform overflow-y-scroll -inset-y-0 z-50 dark:bg-dark-900">
+                            <div className="absolute right-4 top-4 items-center justify-between">
+                                <div className="-mr-2">
+                                    <button
+                                        onClick={() => setOpen(false)}
+                                        type="button"
+                                        className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-brand-700 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-brand-500 dark:text-gray-100 dark:bg-dark-800"
+                                    >
+                                        <span className="sr-only">Close menu</span>
+                                        <FiX size={20} />
+                                    </button>
+                                </div>
                             </div>
-                            <div className="flex justify-between">
-                                {CallOutSection()}
-                                <DarkModeToggle darkMode={darkMode} updateTheme={updateTheme} />
+                            {/* </div> */}
+                            <div className="mt-6 mb-12">
+                                <div className="p-2 pb-4 space-y-1">
+                                    {LogoSection()}
+                                </div>
+                                <div className="pt-2 pb-4 space-y-1">
+                                    <div className="block pl-3 pr-4 py-2 text-base font-medium text-white-600 hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
+                                        <Link href="/product">Product</Link>
+                                    </div>
+                                    <div className="block pl-3 pr-4 py-2 text-base font-medium text-gray-600 hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
+                                        <Link href="/about">About</Link>
+                                    </div>
+                                    <div className="block pl-3 pr-4 py-2 text-base font-medium text-gray-600 hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
+                                        <Link href="/pricing">Pricing</Link>
+                                    </div>
+                                </div>
                             </div>
-                        </SectionContainer>
-                    }
+                        </div>
+                    </Transition>
                 </div>
-            </nav>
-        </div>
+            </nav >
+        </div >
     )
 }
 

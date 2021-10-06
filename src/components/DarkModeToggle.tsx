@@ -11,7 +11,7 @@ const MoonEmoji = () => { return <FiMoon size={15} /> }
 
 
 function DarkModeToggle(props: DarkModeToggleProps) {
-    const { darkMode, updateTheme } = props
+    const { darkMode = true, updateTheme } = props
 
     const toggleDarkMode = () => {
         localStorage.setItem('zenshopsDarkMode', (!darkMode).toString())

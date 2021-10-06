@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import DefaultLayout from '~/components/Layout/Default';
 
-const Product = () => {
+export const Product = () => {
 	return (
 		<>
 			<Head>
@@ -16,5 +16,3 @@ const Product = () => {
 		</>
 	)
 };
-
-export default Product;

@@ -5,12 +5,12 @@ const brandColor = "#4c14bb";
 
 module.exports = {
     mode: "jit",
-    darkMode: "class",
+    darkMode: "media",
     purge: ["./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
             screens: {
-                sm: "640px",
+                sm: "340px",
                 // => @media (min-width: 640px) { ... }
 
                 md: "768px",
@@ -44,7 +44,7 @@ module.exports = {
                     600: "#825bcf",
                     700: "#5e2cc2",
                     800: "#6C39D0",
-                    900: "#6133bb",
+                    900: "#4C14BB",
                 },
                 dark: {
                     100: "#eeeeee",
@@ -54,8 +54,8 @@ module.exports = {
                     500: "#444444",
                     600: "#2a2a2a",
                     700: "#1f1f1f",
-                    800: "#181818",
-                    900: "#0f0f0f",
+                    800: "#212121",
+                    900: "#141414",
                 },
                 gray: {
                     100: "#eeeeee",
@@ -65,8 +65,8 @@ module.exports = {
                     500: "#444444",
                     600: "#2a2a2a",
                     700: "#1f1f1f",
-                    800: "#181818",
-                    900: "#0f0f0f",
+                    800: "#161616",
+                    900: "#121212",
                 },
             },
             spacing: {
@@ -79,6 +79,7 @@ module.exports = {
                 tight: 1.2,
             },
             fontSize: {
+                "sm": "0.9rem",
                 "5xl": "2.5rem",
                 "6xl": "2.75rem",
                 "7xl": "4.5rem",
@@ -92,6 +93,7 @@ module.exports = {
             },
             fontFamily: {
                 sans: [
+                    "inter-font",
                     "roobert-font",
                     "custom-font",
                     "BlinkMacSystemFont",
@@ -117,18 +119,26 @@ module.exports = {
             ringColor: {
                 DEFAULT: brandColor["500"],
             },
+            backdropFilter: {
+                'none': 'none',
+                'blur': 'blur(40px)',
+            },
         },
     },
     variants: {
+        animation: ['responsive', 'motion-safe', 'motion-reducer'],
         extend: {
             inset: ["group-hover"],
             stroke: ["dark"],
             height: ["hover"],
+            backgroundColor: ['checked'],
+            borderColor: ['checked'],
         },
     },
     plugins: [
         require("@tailwindcss/typography"),
         require("@tailwindcss/aspect-ratio"),
         require("@tailwindcss/forms"),
+        require('tailwindcss-filters'),
     ],
 };

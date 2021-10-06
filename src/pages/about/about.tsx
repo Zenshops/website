@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import DefaultLayout from '~/components/Layout/Default';
 
-const About = () => {
+export const About = () => {
 	return (
 		<>
 			<Head>
@@ -14,5 +14,3 @@ const About = () => {
 		</>
 	)
 };
-
-export default About;

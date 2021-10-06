@@ -30,12 +30,12 @@ const DefaultLayout = (props: DefaultLayoutProps) => {
     }
 
     return (
-        <>
+        <div className="w-screen">
             <Header darkMode={darkMode} updateTheme={updateTheme} />
-            <div className="min-h-full max-w-full flex justify-center items-center bg-white dark:bg-gray-900">
+            <div className="min-h-full max-w-full flex justify-center items-center bg-white dark:bg-gray-900 m-auto sm:mx-10">
                 <main>{children}</main>
             </div>
-        </>
+        </div>
     )
 
 }
