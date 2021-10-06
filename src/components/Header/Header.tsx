@@ -122,13 +122,13 @@ const Header = (props: HeaderProps) => {
                                     {LogoSection()}
                                 </div>
                                 <div className="pt-2 pb-4 space-y-1">
-                                    <div className="block pl-3 pr-4 py-2 text-base font-medium text-white-600 hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
+                                    <div className="block pl-3 pr-4 py-2 text-base font-medium text-gray-100 hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
                                         <Link href="/product">Product</Link>
                                     </div>
-                                    <div className="block pl-3 pr-4 py-2 text-base font-medium text-gray-600 hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
+                                    <div className="block pl-3 pr-4 py-2 text-base font-medium text-gray-100 hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
                                         <Link href="/about">About</Link>
                                     </div>
-                                    <div className="block pl-3 pr-4 py-2 text-base font-medium text-gray-600 hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
+                                    <div className="block pl-3 pr-4 py-2 text-base font-medium text-gray-100 hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-dark-600 hover:border-gray-300 dark:text-white">
                                         <Link href="/pricing">Pricing</Link>
                                     </div>
                                 </div>
