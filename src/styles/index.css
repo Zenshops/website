@@ -96,7 +96,7 @@ p {
 
 /* Apply basic global styles to the body: */
 body {
-	@apply bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased;
+	@apply bg-gray-900 dark:bg-gray-900 text-gray-100 dark:text-gray-100 font-sans antialiased;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

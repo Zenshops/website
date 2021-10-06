@@ -2,10 +2,10 @@ import React from 'react'
 import SectionContainer from '../Layout/SectionContainer'
 // import { ErrorMessage } from '../ui/ErrorMessage'
 import { object, string } from 'zod';
-import { Form, useZodForm } from '../ui/Form'
-import { Input } from '../ui/Input'
-import Button from '../ui/Button'
-import { Checkbox } from '../ui/Checkbox';
+import { Form, useZodForm } from '../../components/ui/Form'
+import { Input } from '../../components/ui/Input'
+import Button from '../../components/ui/Button'
+import { Checkbox } from '../../components/ui/Checkbox';
 
 const loginSchema = object({
     email: string().email(),
@@ -20,7 +20,7 @@ export const Hero = () => {
 
 
     return (
-        <SectionContainer className="flex-col m-20 sm:text-center md:text-center">
+        <SectionContainer className="flex-col m-20 bg-gray-900 sm:text-center md:text-center">
             <div className="lg:text-5xl mt-72 font-extrabold md:text-4xl sm:text-3xl">
                 Get your <span className="text-brand-700">online shop</span> in under 60 seconds
             </div>

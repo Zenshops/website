@@ -48,7 +48,7 @@ const Button = (props: ButtonProps) => {
         <>
             <button
                 className={clsx(
-                    'text-center bg-brand-900 dark:bg-brand-900 text-gray-100 dark:text-gray-100 w-full rounded px-4 py-2.5 border disabled:opacity-60 disabled:bg-gray-500 border-none focus:ring-offset-0 focus:right-0 disabled:bg-opacity-20 hover:bg-brand-800 dark:hover:bg-brand-800 font-bold text-sm'
+                    'text-center bg-brand-900 dark:bg-brand-900 text-gray-100 dark:text-gray-100 w-full rounded px-4 py-2.5 border disabled:opacity-60 disabled:bg-gray-500 border-none focus:ring-offset-0 focus:right-0 dark:focus:ring-offset-0 dark:focus:right-0 disabled:bg-opacity-20 hover:bg-brand-800 dark:hover:bg-brand-800 font-bold text-sm'
                 )}
                 type="submit"
             >

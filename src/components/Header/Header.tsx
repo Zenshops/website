@@ -78,7 +78,7 @@ const Header = (props: HeaderProps) => {
 
     return (
         <div className="sticky top-0 z-50">
-            <nav className="bg-white dark:bg-gray-900 border-b dark:border-gray-700">
+            <nav className="bg-dark-900-900 dark:bg-dark-900 border-b border-gray-700 dark:border-gray-700">
                 <div>
                     <HamburgerMenuButton toggleFlyOut={() => { setOpen(true) }} />
                     <SectionContainer>
@@ -103,13 +103,13 @@ const Header = (props: HeaderProps) => {
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
                     >
-                        <div className="p-4 md:p-8 h-screen w-screen fixed bg-white transform overflow-y-scroll -inset-y-0 z-50 dark:bg-dark-900">
+                        <div className="p-4 md:p-8 h-screen w-screen fixed bg-dark-900 transform overflow-y-scroll -inset-y-0 z-50 dark:bg-dark-900">
                             <div className="absolute right-4 top-4 items-center justify-between">
                                 <div className="-mr-2">
                                     <button
                                         onClick={() => setOpen(false)}
                                         type="button"
-                                        className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-brand-700 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-brand-500 dark:text-gray-100 dark:bg-dark-800"
+                                        className="bg-dark-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-brand-700 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-brand-500 dark:text-gray-100 dark:bg-dark-800"
                                     >
                                         <span className="sr-only">Close menu</span>
                                         <FiX size={20} />
