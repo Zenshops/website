@@ -71,6 +71,12 @@ module.exports = {
             },
             spacing: {
                 28: "7rem",
+                100: "30rem",
+                104: "34rem",
+                108: "38rem",
+                112: "42rem",
+                116: "46rem",
+                120: "50rem",
             },
             letterSpacing: {
                 tighter: "-.01em",
@@ -111,6 +117,14 @@ module.exports = {
                     "sans-serif",
                 ],
                 mono: ["Source Code Pro", "Menlo", "monospace"],
+            },
+            translate: {
+                '1/7': '14.2857143%',
+                '2/7': '28.5714286%',
+                '3/7': '42.8571429%',
+                '4/7': '57.1428571%',
+                '5/7': '71.4285714%',
+                '6/7': '85.7142857%',
             },
             stroke: (theme) => ({
                 white: theme("colors.white"),

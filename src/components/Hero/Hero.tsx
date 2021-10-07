@@ -20,8 +20,8 @@ export const Hero = () => {
 
 
     return (
-        <SectionContainer className="flex-col m-20 bg-gray-900 sm:text-center md:text-center">
-            <div className="lg:text-5xl mt-72 font-extrabold md:text-4xl sm:text-3xl">
+        <SectionContainer className="flex-col -mt-40 bg-gray-900 sm:text-center md:text-center">
+            <div className="lg:text-5xl font-extrabold md:text-4xl sm:text-3xl">
                 Get your <span className="text-brand-700">online shop</span> in under 60 seconds
             </div>
             <div className="lg:text-xl lg:mt-4 sm:mt-4 lg:mb-48 sm:text-lg">

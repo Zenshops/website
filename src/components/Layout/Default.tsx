@@ -1,4 +1,5 @@
 import React, { ReactNode, useEffect, useState } from 'react'
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
 interface DefaultLayoutProps {
@@ -30,12 +31,15 @@ const DefaultLayout = (props: DefaultLayoutProps) => {
     }
 
     return (
-        <div className="w-screen sm:select-none">
-            <Header darkMode={darkMode} updateTheme={updateTheme} />
-            <div className="min-h-full max-w-full flex justify-center items-center bg-gray-900 dark:bg-gray-900 m-auto sm:mx-10">
-                <main>{children}</main>
+        <>
+            <div className="flex flex-col w-screen h-screen sm:select-none">
+                <Header darkMode={darkMode} updateTheme={updateTheme} />
+                <div className="h-full max-w-full flex justify-center items-center bg-gray-900 dark:bg-gray-900 sm:mx-10">
+                    <main>{children}</main>
+                </div>
+                <Footer />
             </div>
-        </div>
+        </>
     )
 
 }

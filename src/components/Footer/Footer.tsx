@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            
+        <div className="absolute bottom-10 left-1/2 text-center transform -translate-x-1/2 -translate-y-1/2">
+            © Copyright {new Date().getFullYear()} Zenshops Inc. Made with ♥︎ in Ireland.
         </div>
     );
 }
