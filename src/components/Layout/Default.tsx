@@ -34,7 +34,7 @@ const DefaultLayout = (props: DefaultLayoutProps) => {
         <>
             <div className="flex flex-col w-screen h-screen sm:w-screen sm:h-screen sm:select-none sm:overflow-hidden">
                 <Header darkMode={darkMode} updateTheme={updateTheme} />
-                <div className="h-auto max-w-full flex justify-center items-center mt-72 bg-gray-900 dark:bg-gray-900 sm:mx-10 ">
+                <div className="h-auto max-w-full flex justify-center items-center mt-24 bg-gray-900 dark:bg-gray-900 sm:mx-10 ">
                     <main>{children}</main>
                 </div>
                 <Footer />

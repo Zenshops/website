@@ -81,7 +81,7 @@ const Header = (props: HeaderProps) => {
             <nav className="bg-dark-900-900 dark:bg-dark-900 border-b border-gray-700 dark:border-gray-700">
                 <div>
                     <HamburgerMenuButton toggleFlyOut={() => { setOpen(true) }} />
-                    <SectionContainer>
+                    <SectionContainer className="lg:h-16 sm:h-16">
                         <div className="lg:flex lg:justify-start lg:mx-0 sm:mx-auto items-center">
                             {LogoSection()}
                             {MenuSection()}
