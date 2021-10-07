@@ -20,7 +20,7 @@ export const Hero = () => {
 
 
     return (
-        <SectionContainer className="flex-col -mt-40 bg-gray-900 sm:text-center md:text-center">
+        <SectionContainer className="flex-col bg-gray-900 sm:text-center md:text-center">
             <div className="lg:text-5xl font-extrabold md:text-4xl sm:text-3xl">
                 Get your <span className="text-brand-700">online shop</span> in under 60 seconds
             </div>
