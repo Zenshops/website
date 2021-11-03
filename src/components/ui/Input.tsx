@@ -21,7 +21,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
                     {children}
                 </div>}
                 <input
-                    className={clsx("flex justify-start items-center bg-gray-700 dark:bg-gray-600 border-none text-gray-600 dark:text-gray-100 w-full rounded px-4 py-3 border focus:border-brand-800 focus:transition focus:ease-in focus:ring-brand-900 focus:ring-2 disabled:opacity-60 disabled:bg-gray-500 disabled:bg-opacity-20 text-sm placeholder-gray-400 focus:placeholder-gray-300", className)}
+                    className={clsx("flex justify-start items-center bg-gray-700 dark:bg-gray-600 border-none text-gray-100 dark:text-gray-100 w-full rounded px-4 py-3 border focus:border-brand-800 focus:transition focus:ease-in focus:ring-brand-900 focus:ring-2 disabled:opacity-60 disabled:bg-gray-500 disabled:bg-opacity-20 text-sm placeholder-gray-400 focus:placeholder-gray-300", className)}
                     type={type}
                     placeholder={placeholder}
                     ref={ref}

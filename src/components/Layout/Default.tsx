@@ -30,7 +30,7 @@ const DefaultLayout = (props: DefaultLayoutProps) => {
 
     return (
         <>
-            <div className="flex flex-col w-screen h-screen sm:w-screen sm:h-screen sm:select-none sm:overflow-y-hidden">
+            <div className="flex flex-col w-screen h-screen sm:w-screen sm:h-screen sm:overflow-y-hidden">
                 <Header darkMode={darkMode} updateTheme={updateTheme} />
                 <div className="h-auto max-w-full flex justify-center items-center lg:mt-24 sm:mt-20 bg-gray-900 dark:bg-gray-900 sm:mx-10 ">
                     <main>{children}</main>
