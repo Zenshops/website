@@ -15,8 +15,6 @@ const DefaultLayout = (props: DefaultLayoutProps) => {
     useEffect(() => {
         const isDarkMode = localStorage.getItem('zenshopsDarkMode')
 
-        console.log(isDarkMode)
-
         if (!isDarkMode) {
             localStorage.setItem('zenshopsDarkMode', (!darkMode).toString())
         } else {
@@ -34,7 +32,7 @@ const DefaultLayout = (props: DefaultLayoutProps) => {
         <>
             <div className="flex flex-col w-screen h-screen sm:w-screen sm:h-screen sm:select-none sm:overflow-y-hidden">
                 <Header darkMode={darkMode} updateTheme={updateTheme} />
-                <div className="h-auto max-w-full flex justify-center items-center mt-24 sm:mt-20 bg-gray-900 dark:bg-gray-900 sm:mx-10 ">
+                <div className="h-auto max-w-full flex justify-center items-center lg:mt-24 sm:mt-20 bg-gray-900 dark:bg-gray-900 sm:mx-10 ">
                     <main>{children}</main>
                 </div>
                 <Footer />

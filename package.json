@@ -19,6 +19,7 @@
     "@mdx-js/react": "^1.6.22",
     "@next/bundle-analyzer": "^11.0.1",
     "@next/mdx": "^10.0.7",
+    "@supabase/supabase-js": "^1.25.2",
     "@types/prettier": "^2.3.2",
     "classnames": "2.2.6",
     "clsx": "^1.1.1",
