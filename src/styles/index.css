@@ -4,24 +4,24 @@
 
 @font-face {
 	font-family: "custom-font";
-	src: url(/fonts/custom/DMSans-Regular.woff2) format("woff2"),
-		url(/fonts/custom/DMSans-Regular.woff) format("woff");
+	src: url(/fonts/inter/Inter-Regular.woff2) format("woff2"),
+		url(/fonts/inter/Inter-Regular.woff) format("woff");
 	font-weight: 500;
 	font-style: normal;
 }
 
-/* @font-face {
-	font-family: "custom-font";
-	src: url(/fonts/custom/DMSans-Medium.woff2) format("woff2"),
-		url(/fonts/custom/DMSans-Medium.woff) format("woff");
-	font-weight: 800;
+@font-face {
+	font-family: "inter-Inter";
+	src: url(/fonts/inter/Inter-Medium.woff2) format("woff2"),
+		url(/fonts/inter/Inter-Medium.woff) format("woff");
+	font-weight: 700;
 	font-style: normal;
-} */
+}
 
 @font-face {
-	font-family: "custom-font";
-	src: url(/fonts/custom/DMSans-Bold.woff2) format("woff2"),
-		url(/fonts/custom/DMSans-Bold.woff) format("woff");
+	font-family: "inter-Inter";
+	src: url(/fonts/inter/Inter-Bold.woff2) format("woff2"),
+		url(/fonts/inter/Inter-Bold.woff) format("woff");
 	font-weight: 900;
 	font-style: normal;
 }
