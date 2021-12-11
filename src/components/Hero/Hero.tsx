@@ -38,15 +38,17 @@ export const Hero: React.FC = () => {
     }
 
     return (
-        <SectionContainer className="flex-col bg-gray-900 sm:text-center md:text-center">
-            <div className="lg:text-5xl font-extrabold md:text-4xl sm:text-3xl">
-                Get your <span className="text-brand-700">online shop</span> in under 60 seconds
+        <SectionContainer className="flex-col bg-gray-900 sm:text-center md:text-center -mt-20">
+            <div className="mt-10">
+                <h1 className='text-center text-7xl font-extrabold tracking-tighter leading-[1.1] sm:text-7xl lg:text-7xl xl:text-8xl lg:-mb-8 md:-mb-2 sm:-mb-0.5'>Your <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500">online shop</span></h1>
+                <br className='hidden lg:block' />
+                <h1 className='inline-block text-6xl font-extrabold tracking-tighter leading-[1.1] sm:text-7xl lg:text-7xl xl:text-8xl -mb-10'>in under <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500">60 seconds</span></h1>
             </div>
-            <div className="lg:text-xl lg:mt-4 sm:mt-4 lg:mb-48 sm:text-lg">
-                We bring your customers to you. Grow rich online with us.
-            </div>
-            <div className="lg:-mt-12 w-96 md:mt-28 sm:mt-24 text-center">
-                <span className="">Join the waitlist for an early access.</span>
+            <p className="sm:mt-4 lg:mb-48 max-w-lg mx-auto mt-6 text-xl font-medium leading-tight text-center text-gray-400 sm:max-w-4xl sm:text-xl md:text-3xl lg:text-4xl">
+                Zenshops assists you to grow your business online with a custom dedicated ecommerce solution.
+            </p>
+            <div className="lg:-mt-32 w-96 md:mt-28 sm:mt-24 text-center">
+                Join the waitlist for an early access.
                 <Form
                     form={form}
                     onSubmit={({ email, tac_agreement }) =>

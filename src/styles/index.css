@@ -65,28 +65,28 @@ h2 {
 
 @media only screen and (max-width: 960px) {
 	h1 {
-		font-size: 2.2rem !important;
+		font-size: 4.4rem !important;
 	}
 	h2 {
 		font-size: 2rem !important;
 	}
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 750px) {
 	h1 {
-		font-size: 2rem !important;
+		font-size: 3.4rem !important;
 	}
 	h2 {
 		font-size: 1.8rem !important;
 	}
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 600px) {
 	h1 {
-		font-size: 1.8rem !important;
+		font-size: 2.8rem !important;
 	}
 	h2 {
-		font-size: 1.6rem !important;
+		font-size: 1.8rem !important;
 	}
 }
 
